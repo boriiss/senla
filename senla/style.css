@@ -1,0 +1,151 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	position: relative;
+	overflow-x: hidden;
+}
+.container{
+	max-width: 1140px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.menu ul{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	list-style-type: none;
+	justify-content: center;
+	margin-top: 20px;
+}
+.menu ul a{
+	display: block;
+	text-decoration: none;
+	background: gray;
+	color: #fff;
+	margin: 0 10px;
+	padding: 8px 15px;
+	font-weight: bold;
+}
+.block-hs{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	margin: 30px 0;
+	font-weight: bold;
+}
+.block-hs h1{
+	margin-right: 15px;
+	font-weight: 900;
+}
+.block-hs h2{
+	margin-right: 15px;
+}
+.block-hs h3{
+	margin-right: 15px;
+}
+.block-hs h4{
+	margin-right: 15px;
+}
+.block-hs h5{
+	margin-right: 15px;
+}
+form{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+}
+form input{
+	display: block;
+	margin: 10px 15px 10px 0;
+	padding: 2px 5px;
+	color: gray;
+	-ms-align-items: center;
+	align-items: center;
+	height: 30px;
+	border: 2px solid gray;
+	border-radius: 4px;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+textarea{
+	padding: 15px;
+	resize: none;
+	cursor: pointer;
+}
+.w-100{
+	width: 100%;
+}
+label{
+	cursor: pointer;
+}
+.d-flex{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+.buttons input{
+	background: gray;
+	color: #fff;
+	padding: 10px 20px;
+	display: block;
+	font-weight: bold;
+	height: 40px;
+}
+img{
+	margin: 30px 0;
+}
+table{
+	margin: 0px 0 50px 0;
+}
+table caption{
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+table th, table td{
+	padding: 5px 10px;
+	border: 2px solid gray;
+	border-radius: 4px;
+	
+}
+@media (max-width: 600px) {
+	body::before{
+		content: '';
+		position: absolute;
+		width: 100%;
+		font-weight: bold;
+		height: 100%;
+		background: #fff;
+		display: block;
+	}
+	body::after{
+		content: "КУПИТЕ УСТРОЙСТВО ПОБОЛЬШЕ";
+		position: absolute;
+		font-size: 40px;
+		color: red;
+		text-align: center;
+		line-height: 50px;
+		font-weight: bold;
+		top: 200px;
+		
+	}
+}
+
+
+
+
+
