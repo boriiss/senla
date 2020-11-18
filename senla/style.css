@@ -186,11 +186,6 @@ table th, table td{
 		margin: 40px 0;
 	}
 }
-@media (max-width: 530px) {
-	table{
-		width: min-content;
-	}
-}
 
 
 
