@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senla-html</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js">
+</script>
   </head>
   <body>
     <header>
@@ -51,17 +53,17 @@
             </div>
           </div>
           <div class="grid-block1-item2">
-			  <div class="items">
-            <div class="item2-item1">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, dicta optio! Maiores, voluptates cupiditate vero aperiam adipisci repellat ipsa. Tempora.
+            <div class="items">
+              <div class="item2-item1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, dicta optio! Maiores, voluptates cupiditate vero aperiam adipisci repellat ipsa. Tempora.
+              </div>
+              <div class="item2-item1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, iusto iste minus quidem magnam, mollitia odit. Omnis voluptatibus, optio. Earum!
+              </div>
+              <div class="item2-item1">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum accusamus quia in  officiis laboriosam magni explicabo, laudantium omnis officia.
+              </div>
             </div>
-            <div class="item2-item1">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, iusto iste minus quidem magnam, mollitia odit. Omnis voluptatibus, optio. Earum!
-            </div>
-            <div class="item2-item1">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum accusamus quia in  officiis laboriosam magni explicabo, laudantium omnis officia.
-            </div>
-				  </div>
             <div class="item2-item2">
               <form action="">
                 <input type="color" />
@@ -81,7 +83,7 @@
                 <input type="url" />
                 <input type="week" />
                 <div class="w-100">
-                  <textarea name="" id="" cols="60" rows="5" placeholder="Введите текст"></textarea>
+                  <textarea name="" id="textarea" cols="60" rows="5" placeholder="Введите текст"></textarea>
                   <div class="d-flex">
                     <input type="radio" id="radio" />
                     <label for="radio">Я с этим согласен</label>
@@ -208,5 +210,38 @@
     </main>
     <footer>
     </footer>
+    <script>
+	  	textFirstLinkMenu = document.querySelector(".grid-block2 li:first-child a");
+		elemH1 = document.querySelector(".block-hs h1");
+		elemInput = document.querySelector("#textarea");
+		
+		textFirstLinkMenu.textContent = "Текст этой ссылки был изменен";
+		
+		textFirstLinkMenu.onmouseover = function() {
+    		this.style.background='#ff0000';
+  		};
+		textFirstLinkMenu.onmouseout = function() {
+    		this.style.background='#808080';
+  		};
+		
+		textFirstLinkMenu.onclick = function(e) {
+			e.preventDefault();
+    		alert('Вы кликнули по кнопке');
+  		};
+		
+		elemInput.onfocus = function() {
+			elemInput.style.background = "#ff0000";
+  		};
+		elemInput.onblur = function() {
+			elemInput.style.background = "#ffffff";
+  		};
+		
+		function changeBackgroundOnClick(element){
+				element.onclick = function() {
+					this.style.background='#f0f0f0';
+  			};
+		};
+		changeBackgroundOnClick(elemH1);
+	  </script>
   </body>
 </html>
