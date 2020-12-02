@@ -9,8 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senla-html</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js">
-</script>
+    
   </head>
   <body>
     <header>
@@ -74,7 +73,6 @@
                 <input type="hidden" />
                 <input type="month" />
                 <input type="number" />
-                <input type="password" />
                 <input type="range" />
                 <input type="search" />
                 <input type="tel" />
@@ -194,7 +192,7 @@
           <div class="menu">
             <ul>
               <li>
-                <a href="">
+                <a href="" class="block2-a">
                   Пункт меню
                 </a>
               </li>
@@ -210,38 +208,7 @@
     </main>
     <footer>
     </footer>
-    <script>
-	  	textFirstLinkMenu = document.querySelector(".grid-block2 li:first-child a");
-		elemH1 = document.querySelector(".block-hs h1");
-		elemInput = document.querySelector("#textarea");
-		
-		textFirstLinkMenu.textContent = "Текст этой ссылки был изменен";
-		
-		textFirstLinkMenu.onmouseover = function() {
-    		this.style.background='#ff0000';
-  		};
-		textFirstLinkMenu.onmouseout = function() {
-    		this.style.background='#808080';
-  		};
-		
-		textFirstLinkMenu.onclick = function(e) {
-			e.preventDefault();
-    		alert('Вы кликнули по кнопке');
-  		};
-		
-		elemInput.onfocus = function() {
-			elemInput.style.background = "#ff0000";
-  		};
-		elemInput.onblur = function() {
-			elemInput.style.background = "#ffffff";
-  		};
-		
-		function changeBackgroundOnClick(element){
-				element.onclick = function() {
-					this.style.background='#f0f0f0';
-  			};
-		};
-		changeBackgroundOnClick(elemH1);
-	  </script>
+	  <script src="main.js">
+</script>
   </body>
 </html>
