@@ -1,7 +1,7 @@
 
 //Итерация 4
 
-let additionNumbers = 30 + 70,
+let additionNumbers = 30 + true,
 	differenceNumbers = additionNumbers - 20,
 	multiplicationNumbers = differenceNumbers * differenceNumbers,
 	divisionNumbers = multiplicationNumbers / additionNumbers,
@@ -40,10 +40,16 @@ textFirstLinkMenu.onmouseout = function(){
 	this.style.background = '#808080';
 };
 
+// Отдельная функция, и её вызов в обработчике
+
 textFirstLinkMenu.onclick = function(e){
 	e.preventDefault();
-	alert('Вы кликнули по кнопке');
+	showAlert();
 };
+
+function showAlert(){
+	alert('Вы кликнули по кнопке');
+}
 
 elemInput.onfocus = function(){
 	elemInput.style.background = "#ff0000";
@@ -66,27 +72,21 @@ changeBackgroundOnClick(elemH1);
 let addition = (a, b = 50) => a + b;
 let additionExsample = addition(5);
 
-// Spread / Rest оператор
+// Spread оператор
 function foo(x, y, z) {
     console.log(x, y, z);
 }
-let arr = [55, 68, 13];
-foo(...arr); 
 
-// ‘super’ keyword
-let parent = {
-    foo() {
-        console.log("Привет я Родитель!");
-    }
+let arr = [1, 2, 3];
+foo(...arr); // 1 2 3
+
+// Rest оператор
+
+function foo2(...args) {
+    console.log(args);
 }
-let child = {
-    foo() {
-        super.foo();
-        console.log("Привет я Ребёнок!");
-    }
-}
-Object.setPrototypeOf(child, parent);
-child.foo(); 
+foo2(1, 2, 3, 4, 5); // [1, 2, 3, 4, 5]
+
 
 // yield
 function *infiniteNumbers() {
@@ -126,15 +126,15 @@ class Car {
 }
 
 class Brand extends Car {
-  hide() {
-    alert(`Нету? Тогда ${this.name} прячется!`);
+  price(rubles) {
+    super.price(rubles);
+	alert(`Нету? Тогда ${this.name} прячется!`);
   }
+
 }
 
 let rabbit = new Brand("Audi");
 
-rabbit.price("2 000 000");
-rabbit.hide(); 
-
+//rabbit.price("2 000 000");
 
 
