@@ -134,7 +134,46 @@ class Brand extends Car {
 }
 
 let rabbit = new Brand("Audi");
-
 //rabbit.price("2 000 000");
+
+
+// Итерация 6
+
+// получение текущего URL
+
+let adressUrl = window.location.href;
+
+// Получение информации о браузере
+
+let userAgent = navigator.userAgent;
+
+// Переход по истории вперед
+
+window.history.forward();
+
+// Cookie 
+
+document.cookie = "user=Boris";
+
+document.cookie = "user=BorisNew; path=/; expires=Tue, 31 Jan 2021 03:14:07 GMT";
+
+// Local Storage, Session Storage
+
+localStorage.setItem('name', 'Boris');
+
+sessionStorage.setItem('fullname', 'Nikonov');
+
+console.log(localStorage.getItem('name') + ' ' + sessionStorage.getItem('fullname'));
+
+
+
+
+
+
+
+
+
+
+
 
 
