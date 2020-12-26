@@ -170,13 +170,14 @@ console.log(localStorage.getItem('name') + ' ' + sessionStorage.getItem('fullnam
 
 // Промисы
 
+
 function loadJson(url) {
 	return fetch(url)
 		.then(response => response.json());
 }
 
 function loadUser(name) {
-	return fetch(`https://api.github.com/users/${name}`)
+	return fetch(`https://api.github.com/users/boriiss`)
 		.then(response => response.json());
 }
 
@@ -184,6 +185,7 @@ function showAvatar(user) {
 	return new Promise(function (resolve, reject) {
 		let img = document.createElement('img');
 		img.src = user.avatar_url;
+		console.log(user.avatar_url);
 		img.className = "promise-avatar-example";
 		document.body.append(img);
 		// Вызов ошибки
@@ -195,7 +197,7 @@ function showAvatar(user) {
 	});
 }
 
-loadJson('/article/promise-chaining/user456.json')
+loadJson("https://api.github.com/users/boriiss")
 	.then(user => loadUser(user.name))
 	.then(showAvatar);
 
@@ -206,11 +208,11 @@ loadJson('/article/promise-chaining/user456.json')
 async function showAvatarNew() {
 	try {
 		// запрашиваем JSON с данными пользователя
-		let responseNew = await fetch('/article/promise-chaining/user.json');
+		let responseNew = await fetch('https://api.github.com/users/boriiss');
 		let userNew = await responseNew.json();
 
 		// запрашиваем информацию об этом пользователе из github
-		let githubResponseNew = await fetch(`https://api.github.com/users/${userNew.name}`);
+		let githubResponseNew = await fetch(`https://api.github.com/users/boriiss`);
 		let githubUserNew = await githubResponseNew.json();
 
 		// отображаем аватар пользователя
